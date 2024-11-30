@@ -1,0 +1,33 @@
+
+
+.inp {
+    background-color: #fccf6d;
+    border: 1px solid white;
+    color: white;
+    border-radius: 2rem 0 0 2rem;
+}
+
+
+input {
+    background-color: #fccf6d;
+    border: 1px solid white;
+    color: white;
+    border-radius: 2rem 0 0 2rem;
+}
+
+button{
+    color: white;
+    background-color: #fccf6d;
+    font-family: tahoma;
+    border: 1px solid #fccf6d;
+    border-radius: 0 2rem 2rem 0;
+
+}
+
+.btn {
+    color: white;
+    background-color: #fccf6d;
+    font-family: tahoma;
+    border: 1px solid white;
+    border-radius: 0 2rem 2rem 0;
+}
