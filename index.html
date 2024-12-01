@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>todo</title>
-  <link rel="stylesheet" href="style.css">
-  <meta name="keywords" content="">
-  <meta name="description" content="">
-  <meta name="author" content="">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-
 <body>
-  <div class="header_section">
-    <nav class="navbar navbar-light bg-light justify-content-between">
+  <header>
+    <nav>
       <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div>
-          <input type="text" id="todo-input" class="inp">
-          <button id="submit-button" class="btn">ثبت</button>
+          <input type="text" id="todo-input">
+          <button id="submit-button">ثبت</button>
           <ul id="root">
           </ul>
         </div>
       </div>
-      <span class="toggle_icon" onclick="openNav()"><h2 class="" >=</h2></span>
+      <span class="icon" onclick="openNav()">=</span>
     </nav>
-  </div>
-  <script src="js.js" defer></script>
+  </header>
+  <script src="js/js.js" defer></script>
 </body>
 </html>

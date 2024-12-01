@@ -72,14 +72,12 @@ function renderTodos() {
     const template = todos.map(item => {
         console.log(item)
         return ` 
-<li id="${item}" style="color:#fccf6d">
+<li id="${item}">
             <span>
             ${item}
             </span>
-            <button  onclick="deleteItem(this)" style="color: white;
-    background-color: #fccf6d; border-radius:  2rem 0 0 2rem;border: 1px solid white;margin: 10px;">حذف</button>
-        <button  onclick="editItem(this)" style="color: white;
-    background-color: #fccf6d; margin-top: 10px; border-radius:  0 2rem 2rem 0;border: 1px solid white;">ویرایش</button></li>
+            <button  onclick="deleteItem(this)" >حذف</button>
+        <button  onclick="editItem(this)">ویرایش</button></li>
         `
     })
     const temp = template.join("")
