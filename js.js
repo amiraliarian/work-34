@@ -4,6 +4,41 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
+function editItem(clickedElement) {
+    count++
+    freezAddTodo()
+    if (count === 1) {
+        let submitBtn = document.createElement("button")
+        let editInput = document.createElement("input")
+        editInput.getAttribute("type", "text")
+        editInput.getAttribute("value")
+        editInput.id = "editInput"
+        submitBtn.innerText = "ثبت"
+        submitBtn.id = "editBtn"
+        editInput.placeholder = "متن مورد نظر را وارد کنید"
+        clickedElement.parentElement.appendChild(editInput)
+        clickedElement.parentElement.appendChild(submitBtn)
+        submitBtn.addEventListener("click", () => {
+            if (editInput.value === "") {
+                editInput.remove()
+                submitBtn.remove()
+                count = 0
+            }
+            if (editInput.value !== "") {
+                for (let i = 0; i < todos.length; i++) {
+                    if (todosId[i] === clickedElement.parentElement.id) {
+                        todos.splice(i, 1, editInput.value)
+                        editInput.remove()
+                        submitBtn.remove()
+                        renderTodos()
+                        count = 0
+                    }
+                }
+            }
+            unFreezAddTodo()
+        })
+    }
+}
 const input = document.getElementById("todo-input");
 const btn = document.getElementById("submit-button");
 const root = document.getElementById("root");
@@ -63,41 +98,7 @@ function deleteItem(clickedElement) {
         }
     }
 }
-function editItem(clickedElement) {
-    count++
-    freezAddTodo()
-    if (count === 1) {
-        let submitBtn = document.createElement("button")
-        let editInput = document.createElement("input")
-        editInput.getAttribute("type", "text")
-        editInput.getAttribute("value")
-        editInput.id = "editInput"
-        submitBtn.innerText = "ثبت"
-        submitBtn.id = "editBtn"
-        editInput.placeholder = "متن مورد نظر را وارد کنید"
-        clickedElement.parentElement.appendChild(editInput)
-        clickedElement.parentElement.appendChild(submitBtn)
-        submitBtn.addEventListener("click", () => {
-            if (editInput.value === "") {
-                editInput.remove()
-                submitBtn.remove()
-                count = 0
-            }
-            if (editInput.value !== "") {
-                for (let i = 0; i < todos.length; i++) {
-                    if (todosId[i] === clickedElement.parentElement.id) {
-                        todos.splice(i, 1, editInput.value)
-                        editInput.remove()
-                        submitBtn.remove()
-                        renderTodos()
-                        count = 0
-                    }
-                }
-            }
-            unFreezAddTodo()
-        })
-    }
-}
+
 function freezAddTodo() {
     btn.classList.add("disabled")
 }
