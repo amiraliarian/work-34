@@ -44,3 +44,13 @@ button{
 .navbar {
     padding: 0px 0px;
 }
+
+.navbar-light {
+    color: rgba(0, 0, 0, .9);
+    padding-left: 90px;
+    z-index: 2;
+}
+
+.bg-light {
+    background-color: transparent!important;
+}
