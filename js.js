@@ -1,4 +1,10 @@
 
+function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+  }
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
 const input = document.getElementById("todo-input");
 const btn = document.getElementById("submit-button");
 const root = document.getElementById("root");
