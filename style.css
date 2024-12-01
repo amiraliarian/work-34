@@ -60,3 +60,8 @@ button{
     z-index: 99999999999999;
     background-color: rgb(0, 0, 0, 0.9);
 }
+
+.toggle_icon {
+    background-color: #efc865;
+    padding: 23px 20px;
+}
